@@ -1,0 +1,3 @@
+# Unintentional Delay in Signal Assignment within a VHDL Process
+
+This example demonstrates a subtle bug in VHDL that can lead to unintended delays in signal assignments.  The problem occurs when a signal is assigned inside a clocked process, and that assignment might not immediately reflect the intended value due to VHDL's inherent concurrency and process execution model.   In this case, the output signal `data_out` is updated after a clock cycle rather than synchronously with the input.
